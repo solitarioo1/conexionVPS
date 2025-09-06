@@ -78,7 +78,7 @@ sudo docker-compose up -d --build
 
 ## 🛠️ Problemas Comunes y Soluciones
 
-### **Error: Puerto 80 ocupado**
+### **Error: Puerto 8080 ocupado**
 ```bash
 # Verificar qué usa el puerto 80
 sudo lsof -i :80
@@ -86,6 +86,37 @@ sudo lsof -i :80
 # Solución: Cambiar a puerto 8080 en docker-compose.yml
 ports:
   - "8080:80"
+```
+
+### **Error: Firewall/NSG bloqueando puerto**
+
+**Azure (Network Security Groups):**
+1. Ir a Azure Portal → Tu VM → Networking
+2. Click "Add inbound port rule"
+3. Configurar:
+   - **Origen:** `Any`
+   - **Puertos origen:** `*`
+   - **Destino:** `Any`
+   - **Servicio:** `Custom`
+   - **Puertos destino:** `8080`
+   - **Protocolo:** `TCP`
+   - **Acción:** `Permitir`
+   - **Prioridad:** `350`
+   - **Nombre:** `Allow-Port-8080-Mermeladas`
+
+**Ubuntu/Debian (ufw):**
+```bash
+sudo ufw enable
+sudo ufw allow 8080
+sudo ufw status
+```
+
+**AWS (Security Groups):**
+```bash
+# Agregar regla de entrada:
+# Tipo: Custom TCP
+# Puerto: 8080
+# Origen: 0.0.0.0/0
 ```
 
 ### **Error: ContainerConfig**
