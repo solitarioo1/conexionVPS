@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    container_name: mermeladas-tienda
+    ports:
+      - "80:80"
+    restart: unless-stopped
+    
+    # Limitar recursos (opcional)
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+        reservations:
+          memory: 64M
+    
+    # Healthcheck para verificar que funciona
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s

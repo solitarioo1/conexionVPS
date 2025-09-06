@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mermeladas Artesanales - Compre su Mermelada</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #000000;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: #111111;
+            color: #ffffff;
+            padding: 1rem 0;
+            text-align: center;
+            border-bottom: 2px solid #333333;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            font-style: italic;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            padding: 4rem 0;
+            text-align: center;
+            border-bottom: 3px solid #444444;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #ffffff;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            color: #cccccc;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #000000;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border: 2px solid #ffffff;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cta-button:hover {
+            background-color: transparent;
+            color: #ffffff;
+            border-color: #ffffff;
+        }
+
+        .features {
+            padding: 4rem 0;
+            background-color: #111111;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 2rem;
+            border: 2px solid #444444;
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+
+        .feature-card p {
+            color: #cccccc;
+        }
+
+        .products {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            padding: 4rem 0;
+        }
+
+        .products h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background-color: #2d2d2d;
+            color: #ffffff;
+            padding: 1.5rem;
+            text-align: center;
+            border: 3px solid #444444;
+            transition: all 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255,255,255,0.1);
+            border-color: #666666;
+        }
+
+        .product-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+
+        footer {
+            background-color: #111111;
+            color: #ffffff;
+            text-align: center;
+            padding: 2rem 0;
+            border-top: 3px solid #444444;
+        }
+
+        .contact-info {
+            margin-bottom: 1rem;
+        }
+
+        .contact-info p {
+            margin: 0.5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .logo {
+                font-size: 2rem;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">🍯 MERMELADAS ARTESANALES</div>
+            <div class="tagline">Sabores únicos desde 1985</div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Compre su Mermelada</h1>
+            <p>Mermeladas artesanales elaboradas con frutas frescas y amor</p>
+            <a href="#productos" class="cta-button">Ver Productos</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem; text-transform: uppercase; color: #ffffff;">¿Por qué elegir nuestras mermeladas?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>100% Natural</h3>
+                    <p>Sin conservantes artificiales, solo frutas frescas y azúcar de caña</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Artesanal</h3>
+                    <p>Elaboradas en pequeños lotes con técnicas tradicionales</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Calidad Premium</h3>
+                    <p>Seleccionamos las mejores frutas de temporada para cada mermelada</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="products" id="productos">
+        <div class="container">
+            <h2>Nuestros Productos</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <h3>Mermelada de Fresa</h3>
+                    <p>Fresas frescas con el punto perfecto de dulzor</p>
+                    <div class="price">$12.99</div>
+                </div>
+                <div class="product-card">
+                    <h3>Mermelada de Naranja</h3>
+                    <p>Naranjas cítricas con trozos de cáscara natural</p>
+                    <div class="price">$11.99</div>
+                </div>
+                <div class="product-card">
+                    <h3>Mermelada de Arándanos</h3>
+                    <p>Arándanos silvestres llenos de antioxidantes</p>
+                    <div class="price">$14.99</div>
+                </div>
+                <div class="product-card">
+                    <h3>Mermelada de Durazno</h3>
+                    <p>Duraznos maduros con textura suave y cremosa</p>
+                    <div class="price">$13.99</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="contact-info">
+                <p><strong>📍 Dirección:</strong> Av. Principal 123, Ciudad</p>
+                <p><strong>📞 Teléfono:</strong> +1 (555) 123-4567</p>
+                <p><strong>✉️ Email:</strong> info@mermeladasartesanales.com</p>
+            </div>
+            <p>&copy; 2025 Mermeladas Artesanales. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
