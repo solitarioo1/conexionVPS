@@ -5,7 +5,7 @@ services:
     build: .
     container_name: mermeladas-tienda
     ports:
-      - "80:80"
+      - "8080:80"
     restart: unless-stopped
     
     # Limitar recursos (opcional)
